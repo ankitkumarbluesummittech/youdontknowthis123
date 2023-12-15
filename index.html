@@ -10,7 +10,7 @@
   </head>
   <body>
     <h1>Login</h1>
-    <button onclick="onSignupButtonClick()">onSignupButtonClick</button>
+    <!-- <button onclick="onSignupButtonClick()">onSignupButtonClick</button> -->
     <script>
       // if (window.top && window.top !== window.self) {
       //     window.postMessage("Hello Ankit", "*")
@@ -29,6 +29,18 @@
     //     }
     //   }
     //   window.onSignupButtonClick();
+        // const token = localStorage.getItem("token");
+        // const name = "Ankit";
+        // const logInfo = { hasToken: !!token, name };
+        // const message = logInfo;
+        // if (window.top && window.top !== window.self) {        
+        //     window.parent.postMessage(
+        //       message,
+        //       "https://youdontknowthisparent123.netlify.app"
+        //     );
+        // }
+
+        window.addEventListener("load", function() {
         const token = localStorage.getItem("token");
         const name = "Ankit";
         const logInfo = { hasToken: !!token, name };
@@ -39,6 +51,8 @@
               "https://youdontknowthisparent123.netlify.app"
             );
         }
+      });
+        
     </script>
   </body>
 </html>
