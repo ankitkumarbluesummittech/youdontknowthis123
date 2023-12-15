@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
-        window.localStorage.setItem("token", "Yes It a Token!!!")
+      window.localStorage.setItem("token", "Yes It a Token!!!");
     </script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Hello</h1>
     <button onclick="onSignupButtonClick()">onSignupButtonClick</button>
     <script>
-        // if (window.top && window.top !== window.self) {
-        //     window.postMessage("Hello Ankit", "*")    
-        // }
-        // Function to run when the signup button is clicked
-        function onSignupButtonClick() {
-        const token = localStorage.getItem('token');
-        const name = "Ankit"
+      // if (window.top && window.top !== window.self) {
+      //     window.postMessage("Hello Ankit", "*")
+      // }
+      // Function to run when the signup button is clicked
+      function onSignupButtonClick() {
+        const token = localStorage.getItem("token");
+        const name = "Ankit";
         const logInfo = { hasToken: !!token, name };
         const message = logInfo;
-        window.parent.postMessage(message, 'https://youdontknowthisparent123.netlify.app');
+        if (window.top && window.top !== window.self) {        
+            window.parent.postMessage(
+              message,
+              "https://youdontknowthisparent123.netlify.app"
+            );
         }
+      }
     </script>
-</body>
+  </body>
 </html>
