@@ -16,7 +16,19 @@
       //     window.postMessage("Hello Ankit", "*")
       // }
       // Function to run when the signup button is clickedg
-      function onSignupButtonClick() {
+    //   function onSignupButtonClick() {
+    //     const token = localStorage.getItem("token");
+    //     const name = "Ankit";
+    //     const logInfo = { hasToken: !!token, name };
+    //     const message = logInfo;
+    //     if (window.top && window.top !== window.self) {        
+    //         window.parent.postMessage(
+    //           message,
+    //           "https://youdontknowthisparent123.netlify.app"
+    //         );
+    //     }
+    //   }
+    //   window.onSignupButtonClick();
         const token = localStorage.getItem("token");
         const name = "Ankit";
         const logInfo = { hasToken: !!token, name };
@@ -27,8 +39,6 @@
               "https://youdontknowthisparent123.netlify.app"
             );
         }
-      }
-      window.onSignupButtonClick();
     </script>
   </body>
 </html>
