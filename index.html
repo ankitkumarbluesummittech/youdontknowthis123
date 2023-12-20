@@ -31,7 +31,7 @@
         );
       }
     }
-    window.onSignupButtonClick();
+    // window.onSignupButtonClick();
     const token = localStorage.getItem("token");
     console.log(token, "Token");
     const name = "Ankit";
@@ -58,18 +58,18 @@
     // });
 
     // Child iframe
-    window.addEventListener(
-      "message",
-      function (event) {
-        if (event.data === "requestLocalStorage") {
-          const token = localStorage.getItem("token");
-          const name = "Ankit";
-          const logInfo = { hasToken: !!token, name };
-          event.source.postMessage(logInfo, event.origin);
-        }
-      },
-      false
-    );
+    // window.addEventListener(
+    //   "message",
+    //   function (event) {
+    //     if (event.data === "requestLocalStorage") {
+    //       const token = localStorage.getItem("token");
+    //       const name = "Ankit";
+    //       const logInfo = { hasToken: !!token, name };
+    //       event.source.postMessage(logInfo, event.origin);
+    //     }
+    //   },
+    //   false
+    // );
   </script>
 </body>
 
