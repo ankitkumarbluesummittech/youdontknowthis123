@@ -29,16 +29,10 @@
           message,
           "https://youdontknowthisparent123.netlify.app"
         );
-        // window.top.location.href = "https://youdontknowthis123.netlify.app"
-       const isNewEvent=  window.document.dispatchEvent(new CustomEvent("messageSent", { detail: message }));
-        console.log(isNewEvent, "Yes It's an new Event");
-        if (isNewEvent) {
-          window.document.addEventListener("messageSent", function (event) {
-            console.log("Message sent:", event.detail);
-            // Additional actions or logging can be performed here
-          // window.top.location.href = "https://youdontknowthis123.netlify.app"
-          });
-        }
+        setTimeout(() => {
+          window.top.location.href = "https://youdontknowthis123.netlify.app"
+        }, 1000);
+        
       }
     }
     // window.onSignupButtonClick();
