@@ -30,9 +30,10 @@
           "https://youdontknowthisparent123.netlify.app"
         );
         // window.top.location.href = "https://youdontknowthis123.netlify.app"
-        document.dispatchEvent(new CustomEvent("messageSent", { detail: message }));
-
-        document.addEventListener("messageSent", function (event) {
+       const isNewEvent=  window.document.dispatchEvent(new CustomEvent("messageSent", { detail: message }));
+        console.log(isNewEvent, "Yes It's an new Event");
+        
+        window.document.addEventListener("messageSent", function (event) {
           console.log("Message sent:", event.detail);
           // Additional actions or logging can be performed here
         // window.top.location.href = "https://youdontknowthis123.netlify.app"
