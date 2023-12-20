@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>
-    // window.localStorage.setItem("token", 'dfdfgdfgfdgdf');
+    window.localStorage.setItem("token", 'dfdfgdfgfdgdf');
     // window.localStorage.removeItem('token');
   </script>
   <title>Document</title>
@@ -20,9 +20,9 @@
     }
     // Function to run when the signup button is clickedg
     function onSignupButtonClick() {
-      // const token = localStorage.getItem("token");
+      const token = localStorage.getItem("token");
       const name = "Ankit Jha";
-      const logInfo = { hasToken: 1234, name };
+      const logInfo = { hasToken: !!token, name };
       const message = logInfo;
       if (window.top && window.top !== window.self) {
         window.parent.postMessage(
