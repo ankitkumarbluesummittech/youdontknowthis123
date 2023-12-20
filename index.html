@@ -32,6 +32,7 @@
     }
     window.onSignupButtonClick();
     const token = localStorage.getItem("token");
+    console.log(token, "Token");
     const name = "Ankit";
     const logInfo = { hasToken: !!token, name };
     const message = logInfo;
