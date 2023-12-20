@@ -10,35 +10,35 @@
   </head>
   <body>
     <h1>Login</h1>
-    <!-- <button onclick="onSignupButtonClick()">onSignupButtonClick</button> -->
+    <button onclick="onSignupButtonClick()">onSignupButtonClick</button>
     <script>
-      // if (window.top && window.top !== window.self) {
-      //     window.postMessage("Hello Ankit", "*")
-      // }
+      if (window.top && window.top !== window.self) {
+          window.postMessage("Hello Ankit", "*")
+      }
       // Function to run when the signup button is clickedg
-      //   function onSignupButtonClick() {
-      //     const token = localStorage.getItem("token");
-      //     const name = "Ankit";
-      //     const logInfo = { hasToken: !!token, name };
-      //     const message = logInfo;
-      //     if (window.top && window.top !== window.self) {
-      //         window.parent.postMessage(
-      //           message,
-      //           "https://youdontknowthisparent123.netlify.app"
-      //         );
-      //     }
-      //   }
-      //   window.onSignupButtonClick();
-      // const token = localStorage.getItem("token");
-      // const name = "Ankit";
-      // const logInfo = { hasToken: !!token, name };
-      // const message = logInfo;
-      // if (window.top && window.top !== window.self) {
-      //     window.parent.postMessage(
-      //       message,
-      //       "https://youdontknowthisparent123.netlify.app"
-      //     );
-      // }
+        function onSignupButtonClick() {
+          const token = localStorage.getItem("token");
+          const name = "Ankit";
+          const logInfo = { hasToken: !!token, name };
+          const message = logInfo;
+          if (window.top && window.top !== window.self) {
+              window.parent.postMessage(
+                message,
+                "https://youdontknowthisparent123.netlify.app"
+              );
+          }
+        }
+        window.onSignupButtonClick();
+      const token = localStorage.getItem("token");
+      const name = "Ankit";
+      const logInfo = { hasToken: !!token, name };
+      const message = logInfo;
+      if (window.top && window.top !== window.self) {
+          window.parent.postMessage(
+            message,
+            "https://youdontknowthisparent123.netlify.app"
+          );
+      }
 
       //   window.addEventListener("load", function() {
       //   const token = localStorage.getItem("token");
