@@ -32,12 +32,13 @@
         // window.top.location.href = "https://youdontknowthis123.netlify.app"
        const isNewEvent=  window.document.dispatchEvent(new CustomEvent("messageSent", { detail: message }));
         console.log(isNewEvent, "Yes It's an new Event");
-        
-        window.document.addEventListener("messageSent", function (event) {
-          console.log("Message sent:", event.detail);
-          // Additional actions or logging can be performed here
-        // window.top.location.href = "https://youdontknowthis123.netlify.app"
-        });
+        if (isNewEvent) {
+          window.document.addEventListener("messageSent", function (event) {
+            console.log("Message sent:", event.detail);
+            // Additional actions or logging can be performed here
+          // window.top.location.href = "https://youdontknowthis123.netlify.app"
+          });
+        }
       }
     }
     // window.onSignupButtonClick();
